@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Aluguéis - Cama Elástica</title>    
+    <meta name="theme-color" content="#e67e22">    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="imagens/cama.png">    
+    <link rel="icon" sizes="192x192" href="imagens/cama.png">
+    <meta name="theme-color" content="#ff3131">
+    <link rel="manifest" href="manifes.json">
+
+</head>
+<body>
+
+    <div class="container-agenda">
+        
+        <section id="registro-aluguel">
+            <div class="header-section">
+                <h1>🚀 Novo Agendamento</h1>
+                <p>Preencha os dados abaixo para reservar o equipamento.</p>
+            </div>
+
+            <form id="form-aluguel">
+                <div class="linha-form">
+                    <div class="campo-form">
+                        <label for="cliente">Nome do Cliente:</label>
+                        <input type="text" id="cliente" placeholder="Ex: João Silva" required>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="descricao">Descrição/Equipamento:</label>
+                        <input type="text" id="descricao" placeholder="Ex: Cama Elástica 3m" required>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="telefone">WhatsApp:</label>
+                        <input type="tel" id="telefone" placeholder="Ex: 31999999999" required>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="preco-dia">Preço por Dia (R$):</label>
+                        <input type="number" id="preco-dia" placeholder="Ex: 80" required min="1">
+                    </div>
+                </div>
+
+                <div class="linha-form">
+                    <div class="campo-form">
+                        <label for="data-inicio">Data de Início:</label>
+                        <input type="date" id="data-inicio" required>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="data-fim">Data de Devolução:</label>
+                        <input type="date" id="data-fim" required>
+                    </div>
+                </div>
+
+                <button type="submit" id="btn-reservar">Confirmar Reserva</button>
+            </form>
+        </section>
+
+        <section class="container-busca">
+            <h3>🔍 Gerenciar Reservas</h3>
+            <div class="busca-wrapper">
+                <input type="text" id="busca-cliente" placeholder="Digite o nome do cliente...">
+                
+                <div class="botoes-busca">
+                    <button id="btn-buscar" onclick="filtrarClientes()">🔍 Buscar</button>
+                    <button id="btn-limpar" onclick="limparBusca()">Limpar</button>
+                </div>
+            </div>
+        </section>
+
+        <h3>⚡ Reservas Ativas</h3>
+        <div class="lista-cards" id="lista-agendamentos">
+            </div>
+        
+        <hr class="divisor">
+        
+        <h3>📜 Histórico de Aluguéis Finalizados</h3>
+        <div id="lista-historico" class="lista-cards">
+            </div>
+        
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
