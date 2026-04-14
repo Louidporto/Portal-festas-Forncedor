@@ -114,6 +114,7 @@ document.getElementById('form-cadastro').addEventListener('submit', (e) => {
     const valorRaw = document.getElementById('valor-brinquedo').value;
     const categoria = document.getElementById('prod-categoria').value; 
     const estoqueTotal = parseInt(document.getElementById('prod-estoque').value) || 1;
+    const contato = document.getElementById('whatsapp-dono').value;
 
     // Converte valor para número para cálculos financeiros
     const valorNumerico = parseFloat(valorRaw.replace('R$', '').replace('.', '').replace(',', '.').trim()) || 0;
@@ -123,6 +124,7 @@ document.getElementById('form-cadastro').addEventListener('submit', (e) => {
         imagem: imagem,
         descricao: descricao, // ADICIONADO ao objeto que vai para o Firebase
         valor: valorNumerico,
+        whatsapp_dono: contato,
         categoria: categoria,
         estoque_total: estoqueTotal,
         status: "ativo", // Todo produto começa ativo por padrão
