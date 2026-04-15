@@ -203,6 +203,9 @@ function carregarSolicitacoes() {
                                 </div>
 
                                 <h3>${s.nome_produto || 'Produto'}</h3>
+                                <p style="font-size: 0.85rem; color: #666; margin: 5px 0 10px 0; line-height: 1.2;">
+                                    ${descExibicao}
+                                </p>
 
                                 <p style="margin: 10px 0;">
                                         <span style="background: #eee; padding: 4px 8px; border-radius: 4px; font-weight: bold; color: #333;">
@@ -211,11 +214,7 @@ function carregarSolicitacoes() {
                                 </p>
                                                                 
                                 <div class="contato-cliente">
-                                    <p><strong><i class="fas fa-user"></i></strong> ${nomeCliente}</p>
-                                    <p style="font-size: 0.85rem; color: #666; margin: 5px 0 10px 0; line-height: 1.2;">
-                                    ${descExibicao}
-                                    </p>
-                                  
+                                    <p><strong><i class="fas fa-user"></i></strong> ${nomeCliente}</p>                                  
                                     <p>
                                         <strong><i class="fas fa-map-marker-alt" style="color: #e74c3c;"></i></strong> 
                                         <a href="${linkMapa}" target="_blank" class="link-endereco" title="Abrir no Google Maps" style="text-decoration: none; color: #2980b9; font-weight: bold;">
@@ -308,18 +307,15 @@ function carregarAgenda() {
                                 <p style="font-size: 0.85rem; color: #666; margin: 5px 0 10px 0; line-height: 1.2;">
                                     ${descExibicao}
                                 </p>
-
                                 <p style="margin: 10px 0;">
                                     <span style="background: #eee; padding: 4px 8px; border-radius: 4px; font-weight: bold; color: #333;">
                                         <i class="fas fa-layer-group"></i> Qtd: ${qtdAlugada}
                                     </span>
-                                </p>
-                                
+                                </p>                                
                                 <div class="contato-cliente">
                                     <p><strong><i class="fas fa-user"></i></strong> ${nomeCliente}</p>
                                     
-                                   <p>
-                                        <strong><i class="fas fa-map-marker-alt" style="color: #e74c3c;";"></i></strong> 
+                                    <p>                                        <strong><i class="fas fa-map-marker-alt" style="color: #e74c3c;";"></i></strong> 
                                         <a href="${linkMapa}" target="_blank" style="text-decoration: none; color: #2980b9; font-weight: bold;">
                                             ${endereco}
                                         </a>
